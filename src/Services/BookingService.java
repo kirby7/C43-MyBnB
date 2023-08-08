@@ -146,6 +146,14 @@ public class BookingService {
             catch (NumberFormatException e) {
                 System.out.println("Input is not a numerical value");
             }
+            System.out.println("Input the number in square brackets by the listing to view it, " +
+                    "or input cancel to stop searching for listings:");
+            i = 1;
+            for (Listing l : listings) {
+                if (l != null)
+                    System.out.println("   [" + i + "] " + l.toString());
+                i++;
+            }
         }
 
         stmt.close();
